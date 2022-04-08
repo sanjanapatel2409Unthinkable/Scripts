@@ -1,0 +1,3 @@
+ALTER TABLE plu_kit_combo_header RENAME TO plu_prep_combo_header;
+    
+    ALTER TABLE plu_kit_combo_items RENAME TO plu_prep_combo_items;

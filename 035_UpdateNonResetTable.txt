@@ -1,0 +1,14 @@
+ALTER TABLE [nonresettotals]
+     ADD currentamt_inclusive numeric(19,4) NOT NULL default(0);
+   
+    
+    ALTER TABLE [nonresettotals]
+     ADD openingamt_inclusive numeric(19,4) NOT NULL default(0);
+   
+    
+    ALTER TABLE nonresettotals RENAME COLUMN preresetamt TO openingamt_netted;
+   
+    
+    ALTER TABLE nonresettotals RENAME COLUMN currentamt TO currentamt_netted;
+   
+    

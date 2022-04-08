@@ -1,0 +1,65 @@
+ALTER TABLE [category1]
+     DROP COLUMN [webstore];
+    
+    
+   ALTER TABLE [category2]
+     DROP COLUMN [webstore];
+    
+    
+   ALTER TABLE [category3]
+     DROP COLUMN [webstore];
+    
+    
+   --ALTER TABLE [category1] ALTER COLUMN [category_id] varchar(50) NULL;
+
+    ALTER TABLE [category1]
+     ADD COLUMN tempcol varchar(50)  NULL;
+
+     UPDATE [category1] set tempcol =[category_id]   ;	
+	
+     ALTER TABLE [category1]
+     DROP COLUMN [category_id]  ; 
+
+     ALTER TABLE [category1]
+	RENAME COLUMN tempcol TO [category_id]  ;
+    
+    
+   --ALTER TABLE [category2] ALTER COLUMN [category_id] varchar(50) NULL;
+    
+    ALTER TABLE [category2]
+     ADD COLUMN tempcol varchar(50)  NULL;
+
+     UPDATE [category2] set tempcol =[category_id]   ;	
+	
+     ALTER TABLE [category2]
+     DROP COLUMN [category_id]  ; 
+
+     ALTER TABLE [category2]
+	RENAME COLUMN tempcol TO [category_id]  ;
+    
+   --ALTER TABLE [category3] ALTER COLUMN [category_id] varchar(50) NULL;
+    
+    
+    ALTER TABLE [category3]
+     ADD COLUMN tempcol varchar(50)  NULL;
+
+     UPDATE [category3] set tempcol =[category_id]   ;	
+	
+     ALTER TABLE [category3]
+     DROP COLUMN [category_id]  ; 
+
+     ALTER TABLE [category3]
+	RENAME COLUMN tempcol TO [category_id]  ;
+
+   --ALTER TABLE [category4] ALTER COLUMN [category_id] varchar(50) NULL;
+
+    ALTER TABLE [category4]
+     ADD COLUMN tempcol varchar(50)  NULL;
+
+     UPDATE [category4] set tempcol =[category_id]   ;	
+	
+     ALTER TABLE [category4]
+     DROP COLUMN [category_id]  ; 
+
+     ALTER TABLE [category4]
+	RENAME COLUMN tempcol TO [category_id]  ;

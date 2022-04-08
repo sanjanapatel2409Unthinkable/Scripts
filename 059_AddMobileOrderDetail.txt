@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS [mobile_order_detail] (
+   [order_id] [varchar](50) NOT NULL,
+   [name] [varchar](100) NOT NULL,
+   [plu] [varchar](30) NOT NULL,
+   [price_amount] [money] NOT NULL,
+   [tax_included] [smallint] NOT NULL,
+   [tax_1_applicable] [smallint] NOT NULL,
+   [tax_2_applicable] [smallint] NOT NULL
+   );

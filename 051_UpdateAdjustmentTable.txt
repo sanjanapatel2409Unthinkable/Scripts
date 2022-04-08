@@ -1,0 +1,1 @@
+ALTER TABLE adjustment RENAME COLUMN  adjolu TO gl_record_id

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS [bf_system_message] (
+    [record_id] [int] IDENTITY(1,1) NOT NULL,
+    [message] [nvarchar](1000) NULL,
+    [viewed] smallint NULL,
+    [sent_by] smallint NULL,
+    [date_received] datetime NULL,
+    [date_viewed] datetime NULL
+    );

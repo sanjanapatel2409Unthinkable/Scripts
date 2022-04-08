@@ -1,0 +1,25 @@
+   --added for 2.4 code
+    ALTER TABLE header
+     DROP COLUMN datacenter_sync;
+   
+    --added for 2.4 code
+    ALTER TABLE header
+     ADD datacenter_purchase_id int;
+
+   --ALTER TABLE header ALTER COLUMN [client_id] VARCHAR(25) NULL;
+
+    ALTER TABLE [header]
+     ADD COLUMN tempcol VARCHAR(25) NULL;
+
+     UPDATE [header] set tempcol =[client_id]   ;	
+	
+     ALTER TABLE [header]
+     DROP COLUMN [client_id]  ; 
+
+     ALTER TABLE [header]
+	RENAME COLUMN tempcol TO [client_id]  ;
+	 
+   --added for 2.4 code
+    ALTER TABLE header
+     ADD mobile_order int;
+    

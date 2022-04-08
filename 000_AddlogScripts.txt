@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS logScripts([ID] INTEGER PRIMARY KEY AUTOINCREMENT,
+[ScriptFileName] TEXT,
+[ExcutedOn] datetime  ,
+[IsSuccessed] bit,
+[Error] TEXT);

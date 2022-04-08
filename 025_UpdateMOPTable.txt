@@ -1,0 +1,182 @@
+ALTER TABLE payment RENAME COLUMN compulse_billing_account TO datacenter_ledger;
+    
+    
+   ALTER TABLE payment RENAME COLUMN postif_id TO datacenter_id;
+    
+    
+   ALTER TABLE payment
+     ADD datacenter_type VARCHAR(25);
+    
+    
+   ALTER TABLE payment
+     ADD allow_change tinyint NULL;
+    
+    
+   ALTER TABLE payment
+     ADD datacenter_ledger tinyint NULL;
+    
+    
+   ALTER TABLE payment
+     ADD enforce_security tinyint DEFAULT 0 WITH VALUES NOT NULL;
+    
+    
+   --ALTER TABLE payment ALTER COLUMN [slip] tinyint NULL;
+    
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol tinyint NULL;
+
+     UPDATE [payment] set tempcol =[slip]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [slip] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [slip] ;
+    
+   --ALTER TABLE payment ALTER COLUMN [validate] tinyint NULL;
+     
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol tinyint NULL;
+
+     UPDATE [payment] set tempcol =[validate]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [validate] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [validate] ;
+    
+    
+   --ALTER TABLE payment ALTER COLUMN [compulse_tender] smallint NULL;
+
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol smallint  NULL;
+
+     UPDATE [payment] set tempcol =[compulse_tender]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [compulse_tender] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [compulse_tender] ;
+    
+    
+   --ALTER TABLE payment ALTER COLUMN [allow_postdated] smallint NULL;
+    
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol smallint  NULL;
+
+     UPDATE [payment] set tempcol =[allow_postdated]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [allow_postdated] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [allow_postdated] ;
+    
+   --ALTER TABLE payment ALTER COLUMN [compulse_account] tinyint NULL;    
+
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol tinyint NULL;
+
+     UPDATE [payment] set tempcol =[compulse_account]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [compulse_account] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [compulse_account] ;
+    
+  -- ALTER TABLE payment ALTER COLUMN [compulse_billing_account] tinyint NULL;
+     
+     ALTER TABLE [payment]
+     ADD COLUMN tempcol tinyint NULL;
+
+     UPDATE [payment] set tempcol =[compulse_billing_account]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [compulse_billing_account] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [compulse_billing_account] ;
+    
+   --ALTER TABLE payment ALTER COLUMN [signature_trailer] tinyint NULL;
+       
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol tinyint NULL;
+
+     UPDATE [payment] set tempcol =[signature_trailer]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [signature_trailer] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [signature_trailer] ;
+    
+   --ALTER TABLE payment ALTER COLUMN [allow_overpreset] tinyint NULL;
+    
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol tinyint NULL;
+
+     UPDATE [payment] set tempcol =[allow_overpreset]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [allow_overpreset] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [allow_overpreset] ;
+    
+   --ALTER TABLE payment ALTER COLUMN [payment_exchange] tinyint NULL;
+    
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol tinyint NULL;
+
+     UPDATE [payment] set tempcol =[payment_exchange]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [payment_exchange] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [payment_exchange] ;
+    
+   --ALTER TABLE payment ALTER COLUMN [no_slit_tender] tinyint NULL;
+    
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol tinyint NULL;
+
+     UPDATE [payment] set tempcol =[no_slit_tender]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [no_slit_tender] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [no_slit_tender] ;
+    
+   --ALTER TABLE payment ALTER COLUMN [prtInvoice] tinyint NULL;
+    
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol tinyint NULL;
+
+     UPDATE [payment] set tempcol =[prtInvoice]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [prtInvoice] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [prtInvoice] ;
+    
+   --ALTER TABLE payment ALTER COLUMN [overridePrtReceipt] tinyint NULL;
+    
+    ALTER TABLE [payment]
+     ADD COLUMN tempcol tinyint NULL;
+
+     UPDATE [payment] set tempcol =[overridePrtReceipt]  ;	
+	
+     ALTER TABLE [payment]
+     DROP COLUMN [overridePrtReceipt] ; 
+
+     ALTER TABLE [payment]
+	RENAME COLUMN tempcol TO [overridePrtReceipt] ;
+    
+   ALTER TABLE payment RENAME COLUMN pymt_group1_id TO gl_record_id;
+    

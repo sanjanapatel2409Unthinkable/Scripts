@@ -1,0 +1,24 @@
+	--v 7.1.1
+    ALTER TABLE tax
+     ADD min_tax_amount money;
+    
+    ALTER TABLE tax
+     ADD datacenter_id int;
+    
+    ALTER TABLE tax
+     ADD gl_record_id int;
+    
+    ALTER TABLE [tax]
+     DROP COLUMN [gl_key];
+    
+    ALTER TABLE tax
+     ADD is_tax_exempt_below BIT NOT NULL DEFAULT(0);
+    
+    ALTER TABLE tax
+     ADD tax_exempt_below DECIMAL(19,4);
+    
+    ALTER TABLE tax
+     ADD is_tax_exempt_if_qty BIT NOT NULL DEFAULT(0);
+    
+    ALTER TABLE tax
+     ADD tax_exempt_if_qty INT;

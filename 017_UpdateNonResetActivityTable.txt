@@ -1,0 +1,2 @@
+ ALTER TABLE [nonreset_activity_log]
+    ADD datacenter_reset_id integer;

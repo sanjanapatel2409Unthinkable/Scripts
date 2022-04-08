@@ -1,0 +1,16 @@
+ CREATE TABLE IF NOT EXISTS [plu_kit_combo_header] (
+    [recordID] int IDENTITY(1,1) NOT NULL,
+    [type] smallint,
+    [name] [varchar](30) NULL,
+    [amount] money DEFAULT 0
+    );
+    
+       
+    
+     CREATE TABLE IF NOT EXISTS [plu_kit_combo_items] (
+    [recordID] int NOT NULL,
+    [item_key] [varchar](30) NULL,
+    [item_price] money DEFAULT 0,
+    [item_group] smallint
+    );
+    

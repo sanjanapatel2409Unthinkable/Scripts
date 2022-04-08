@@ -1,0 +1,20 @@
+ CREATE TABLE IF NOT EXISTS [mobile_order_header] (
+   [order_id] [varchar](50) NOT NULL PRIMARY KEY,
+   [status] [varchar](30) NOT NULL,
+   [memo] [varchar](100) NOT NULL,
+   [ordered_at] [datetime] NULL,
+   [ordered_by_name] [varchar](100) NOT NULL,
+   [ordered_by_email] [varchar](100) NOT NULL,
+   [pick_up_time] [datetime] NOT NULL,
+   [pick_up_time_local] [datetime] NOT NULL,
+   [subtotal_amount] [money] NOT NULL,
+   [tax_1_amount] [money] NOT NULL,
+   [tax_1_name] [varchar] (20) NOT NULL,
+   [tax_1_value] [float] NOT NULL,
+   [tax_2_amount] [money] NOT NULL,
+   [tax_2_name] [varchar] (20) NOT NULL,
+   [tax_2_value] [float] NOT NULL,
+   [total_amount] [money] NOT NULL,
+   [status_updated] [smallint] NULL,
+   [pos_transaction] [smallint] NULL
+   );

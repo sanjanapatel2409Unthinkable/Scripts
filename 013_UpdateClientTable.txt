@@ -1,0 +1,21 @@
+    --v 2 RENAME COLUMN  4
+    ALTER TABLE client
+    ADD time_zone_id int;    
+    
+    ALTER TABLE client
+    ADD meal_plan_type int;    
+    
+    ALTER TABLE client
+    ADD preset_meal_id int;    
+    
+    ALTER TABLE client
+    ADD PIN varchar(20);    
+    
+    ALTER TABLE client RENAME COLUMN  keep_balance TO balance_type;    
+    
+    ALTER TABLE client RENAME COLUMN  CliDeleted TO deleted;    
+    
+    ALTER TABLE client RENAME COLUMN  daily_spend_limit TO spend_limit;    
+    
+    ALTER TABLE [client]
+    DROP COLUMN [sparcRID];

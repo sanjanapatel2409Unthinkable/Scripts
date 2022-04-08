@@ -1,0 +1,51 @@
+ALTER TABLE plu RENAME COLUMN  revenue_id TO auto_tender   ;  
+
+ALTER TABLE plu RENAME COLUMN  server_id TO gl_record_id  ;    
+
+ALTER TABLE plu
+   ADD pos_price_change smallint  ;
+    
+ALTER TABLE plu
+    ADD stkgroup4_id int;
+    
+    
+ALTER TABLE plu
+    ADD datacenter_gl_id int;
+    
+ALTER TABLE plu
+      ADD kit_combo_id int ;
+    
+    
+ALTER TABLE plu
+      ADD plu_tender_id int;
+    
+    --ALTER COLUMN stkdesc1    
+
+    ALTER TABLE [plu]
+     ADD COLUMN tempcol varchar(50) NULL;
+
+     UPDATE [plu] set tempcol =stkdesc1 ;	
+	
+     ALTER TABLE [plu]
+     DROP COLUMN stkdesc1; 
+
+     ALTER TABLE [plu]
+	RENAME COLUMN tempcol TO stkdesc1 ;    
+    
+   
+     ALTER TABLE [plu]
+     ADD COLUMN tempcol varchar(50) null;
+
+     update [plu] set tempcol =stkdesc2 ;	
+	
+     ALTER TABLE [plu]
+     DROP COLUMN payment_reference ; 
+
+     ALTER TABLE [plu]
+	RENAME COLUMN tempcol TO stkdesc2 ;
+    
+    
+    ALTER TABLE plu
+      DROP COLUMN auto_tender
+     ;
+    

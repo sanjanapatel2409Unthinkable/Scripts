@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS [category4] (
+    [category_id] [varchar](30) NULL,
+    [group_number] [smallint] NULL,
+    [record_id] [int] IDENTITY(1,1) NOT NULL,
+    [markup_rate] [float] NULL,
+    [margin_rate] [float] NULL,
+    [markup_lvl1] [float] NULL,
+    [markup_lvl2] [float] NULL,
+    [markup_lvl3] [float] NULL,
+    [markup_lvl4] [float] NULL,
+    [markup_lvl5] [float] NULL,
+    [markup_lvl6] [float] NULL,
+    [markup_lvl7] [float] NULL,
+    [markup_lvl8] [float] NULL,
+    [markup_lvl9] [float] NULL,
+    [markup_lvl10] [float] NULL,
+    [markup_lvl11] [float] NULL,
+    [markup_lvl12] [float] NULL,
+    [datestamp] [datetime] NULL,
+    [client_subaccountID] [int] NULL
+    );

@@ -1,0 +1,54 @@
+
+    ALTER TABLE [department]
+    DROP COLUMN [first_card_deposit];
+    
+    ALTER TABLE [department]
+    ADD [ecr_tracking] smallint;
+    
+    ALTER TABLE [department]
+    ADD [deptgroup4_id] int;
+    
+    --ALTER TABLE [department]ALTER COLUMN [postable] int NULL;
+
+    ALTER TABLE [department]
+     ADD COLUMN tempcol int  NULL;
+
+     UPDATE [department] set tempcol =[postable] ;	
+	
+     ALTER TABLE [department]
+     DROP COLUMN [postable] ; 
+
+     ALTER TABLE [department]
+	RENAME COLUMN tempcol TO [postable] ;
+    
+    --ALTER TABLE [department] ALTER COLUMN [compulse_account] int NULL;
+
+    ALTER TABLE [department]
+     ADD COLUMN tempcol int  NULL;
+
+     UPDATE [department] set tempcol =[compulse_account] ;	
+	
+     ALTER TABLE [department]
+     DROP COLUMN [compulse_account] ; 
+
+     ALTER TABLE [department]
+	RENAME COLUMN tempcol TO [compulse_account] ;
+    
+    --ALTER TABLE [department] ALTER COLUMN [allow_discount] int NULL;
+
+    ALTER TABLE [department]
+     ADD COLUMN tempcol int  NULL;
+
+     UPDATE [department] set tempcol =[allow_discount]  ;	
+	
+     ALTER TABLE [department]
+     DROP COLUMN [allow_discount] ; 
+
+     ALTER TABLE [department]
+	RENAME COLUMN tempcol TO [allow_discount] ;
+    
+    ALTER TABLE [department]
+    ADD [posting_type] smallint;
+    
+    ALTER TABLE [department]
+    ADD [gl_record_id] smallint;

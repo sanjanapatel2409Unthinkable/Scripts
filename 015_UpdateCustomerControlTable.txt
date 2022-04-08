@@ -1,0 +1,22 @@
+--v 7.1.1
+    
+     ALTER TABLE customer_control
+     ADD enforce_pin smallint;
+    
+     ALTER TABLE customer_control RENAME COLUMN  remote_pos_interface_active TO parse_client_id;
+     
+     ALTER TABLE customer_control
+     ADD parse_minimum_length smallint;
+	 
+     ALTER TABLE customer_control
+     ADD parse_uniqueid_length smallint;
+	 
+     ALTER TABLE customer_control
+     ADD parse_pattern_rule varchar(20);
+	 
+     ALTER TABLE customer_control
+     ADD parse_replace_rule varchar(20);
+	 
+     ALTER TABLE customer_control
+     ADD parse_pad_character varchar(5);
+    

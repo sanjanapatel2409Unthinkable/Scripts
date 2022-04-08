@@ -1,0 +1,2 @@
+    ALTER TABLE system_reports
+     ADD report_copies int NOT NULL default(1);

@@ -1,0 +1,27 @@
+   ALTER TABLE transaction_admin ADD Id INT  IDENTITY(1,1) ;
+    
+   ALTER TABLE transaction_admin ADD datacenter_id INT;
+    
+   ALTER TABLE transaction_admin ADD datestamp DATETIME NULL ;
+    
+   ALTER TABLE transaction_modifier ADD Id INT ;
+    
+   ALTER TABLE transaction_modifier ADD datacenter_id INT;
+    
+   ALTER TABLE transaction_modifier ADD datestamp DATETIME NULL ;
+
+   ALTER TABLE adjustment ADD datacenter_id INT;
+
+   ALTER TABLE TimeZoneHeader ADD datestamp DATETIME NULL ;
+    
+   ALTER TABLE TimeZoneHeader ADD datacenter_id INT;
+    
+   ALTER TABLE TimeZoneElements ADD datestamp DATETIME NULL ;
+    
+   ALTER TABLE TimeZoneElements ADD datacneter_id INT;
+    
+   ALTER TABLE TimeZoneElements ADD id INT IDENTITY(1,1) ;    
+  
+    
+   ALTER TABLE transaction_tender ADD datacenter_id INT;
+    

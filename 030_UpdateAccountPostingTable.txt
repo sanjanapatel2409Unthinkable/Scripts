@@ -1,0 +1,9 @@
+ DROP INDEX charge_postingrecord_id ON [account_posting];   
+    
+    DROP INDEX PK_charge_posting ON [account_posting];   
+    
+    ALTER TABLE [account_posting]
+     DROP COLUMN [record_id];   
+
+    ALTER TABLE [account_posting]
+     ADD [client_account_id] varchar(30);    

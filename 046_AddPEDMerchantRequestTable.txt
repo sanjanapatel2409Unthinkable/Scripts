@@ -1,0 +1,6 @@
+ CREATE TABLE IF NOT EXISTS[ped_merchant_request] (
+    [transaction_id] int NOT NULL,
+    [terminal_id] int NOT NULL,
+    [location_id] int NOT NULL,
+    [request_message] [varchar](1500) NULL
+    );

@@ -1,0 +1,63 @@
+ALTER TABLE bf_system_control
+     ADD merchant_services_provider smallint
+     merchant_id varchar(30);
+     
+ALTER TABLE bf_system_control
+     ADD price_on_menus smallint ;
+    
+    
+    ALTER TABLE bf_system_control
+     ADD pos_mainform_type smallint  ;
+    
+    
+    ALTER TABLE bf_system_control
+     ADD dept_high_amount_lock money NOT NULL default(0) ;
+    
+    
+    ALTER TABLE bf_system_control
+     ADD tender_high_amount_lock money NOT NULL default(0) ;
+    
+    
+    ALTER TABLE bf_system_control
+     ADD refund_max_amount money NOT NULL default(0) ;
+    
+    
+    ALTER TABLE bf_system_control
+     ADD contract_expire_date datetime NOT NULL default(0) ;
+    
+    
+    ALTER TABLE bf_system_control
+     ADD merchant_ip_address varchar(30)  ;
+    
+    
+    ALTER TABLE bf_system_control
+     ADD merchant_ip_port varchar(10) ;
+    
+    --ALTER COLUMN [ped_ecr_id]
+    
+	ALTER TABLE bf_system_control
+     ADD COLUMN tempcol varchar(15) NULL;
+
+     update bf_system_control set tempcol = ped_ecr_id ;	
+	
+     ALTER TABLE bf_system_control
+     DROP COLUMN [ped_ecr_id] ;
+
+     ALTER TABLE bf_system_control
+	RENAME COLUMN tempcol TO ped_ecr_id; 
+    
+     
+    ALTER TABLE bf_system_control
+     ADD ped_password varchar(30)  ;
+    
+    
+    ALTER TABLE bf_system_control
+     ADD card_key_entry smallint  ;
+    
+    
+    ALTER TABLE bf_system_control
+     ADD force_customer_receipt smallint  ;
+    
+        
+    
+    

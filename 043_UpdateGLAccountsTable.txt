@@ -1,0 +1,12 @@
+ --added for 3.0.10 code
+    ALTER TABLE gl_account
+     DROP COLUMN group_id;
+    
+    ALTER TABLE gl_account
+     DROP COLUMN tax_id;
+    
+    ALTER TABLE gl_account
+     DROP COLUMN account_type;
+    
+    ALTER TABLE gl_account
+     ADD datacenter_id int;

@@ -1,0 +1,23 @@
+ALTER TABLE [clerk]
+     ADD [allow_backoffice] smallint;
+    
+    ALTER TABLE [clerk]
+     ADD [update_password] smallint;
+    
+    ALTER TABLE [clerk]
+     DROP COLUMN [ClkRevenueTrack];
+    
+    ALTER TABLE [clerk]
+     ADD [LastPasswordResetDate] DATETIME NOT NULL DEFAULT(GETDATE());
+    
+    ALTER TABLE [clerk]
+     ADD LastPassword1 VARCHAR(32);
+    
+    ALTER TABLE [clerk]
+     ADD LastPassword2 VARCHAR(32);
+    
+    ALTER TABLE [clerk]
+     ADD DaysToResetPassword SMALLINT NOT NULL DEFAULT(90);
+    
+     ALTER TABLE [clerk]
+     ADD Email NVARCHAR(150) NULL ;

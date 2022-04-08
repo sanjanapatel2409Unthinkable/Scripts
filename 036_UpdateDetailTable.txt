@@ -1,0 +1,21 @@
+--added for 2.4 code
+     ALTER TABLE detail
+     DROP COLUMN dts_exported;
+    
+    
+    --added for 2.4 code
+     ALTER TABLE detail
+     ADD memo VARCHAR(25) NULL;
+    
+     --ALTER TABLE detail ALTER COLUMN [memo] VARCHAR(40) NULL;
+
+     ALTER TABLE [detail]
+     ADD COLUMN tempcol varchar(50) NULL;
+
+     UPDATE [detail] set tempcol =[memo]  ;	
+	
+     ALTER TABLE [detail]
+     DROP COLUMN [memo] ; 
+
+     ALTER TABLE [detail]
+	RENAME COLUMN tempcol TO [memo] ;

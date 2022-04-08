@@ -1,0 +1,3 @@
+update functions_back_office
+     set function_name ='TranAnalyze', function_label ='Transaction Analysis'
+     where function_id = 24 ;

@@ -1,0 +1,15 @@
+ CREATE TABLE IF NOT EXISTS [navisions_export] (
+    [lane_id] [int] NULL,
+    [gl_account] [nvarchar](50) NULL,
+    [amount] money NULL
+    );
+   
+    
+     CREATE TABLE IF NOT EXISTS [navisions_export_temp] (
+    [lane_id] [int] NULL,
+    [gl_account] [nvarchar](50) NULL,
+    [amount] money NULL
+    );
+   
+    
+ 

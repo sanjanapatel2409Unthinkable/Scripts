@@ -1,0 +1,41 @@
+     ALTER TABLE [mobile_order_header]
+     ADD payment varchar(30);
+    
+     ALTER TABLE [mobile_order_header]
+     ADD ordered_for  varchar(100);
+    
+     ALTER TABLE [mobile_order_header]
+     ADD order_ready_time datetime;
+    
+     ALTER TABLE [mobile_order_header]
+     ADD order_ready_time_local datetime;
+    
+     ALTER TABLE [mobile_order_header]
+     ADD deliver_to varchar(100);
+    
+     ALTER TABLE [mobile_order_header]
+     ADD daily_batch_id smallint not null default 0;
+    
+     ALTER TABLE [mobile_order_header]
+     ADD fee money not null default(0);
+
+    --ALTER COLUMN pos_transaction 
+     ALTER TABLE [mobile_order_header]
+     ADD COLUMN tempcol int not null;
+
+     update [mobile_order_header] set tempcol =pos_transaction 	;
+	
+     ALTER TABLE [mobile_order_header]
+     DROP COLUMN pos_transaction;  
+
+     ALTER TABLE [mobile_order_header]
+	RENAME COLUMN tempcol TO pos_transaction;  
+
+     ALTER TABLE [mobile_order_header]
+     ADD payment_last4 varchar(4);
+    
+     ALTER TABLE [mobile_order_header]
+     ADD payment_processor varchar(50);
+    
+     ALTER TABLE [mobile_order_header]
+     ADD payment_reference varchar(50);

@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS [transaction_admin1] (
+[terminal_id] int,
+[location_id] int,
+[reset_batch_id] int,
+[transaction_date] [datetime],
+[clerk_user_id] [varchar](35),
+[operation_type] smallint);

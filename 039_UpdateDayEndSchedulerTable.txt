@@ -1,0 +1,2 @@
+ALTER TABLE [day_end_scheduler]
+     ADD [pre_reset] smallint;

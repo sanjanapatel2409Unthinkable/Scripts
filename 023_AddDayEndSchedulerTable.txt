@@ -1,0 +1,9 @@
+    
+CREATE TABLE IF NOT EXISTS [day_end_scheduler] (
+     [task] [nvarchar](50) NULL,
+     [process_id] int NULL,
+     [priority_id] int NULL
+     );
+        
+INSERT INTO day_end_scheduler ( task, process_id,  priority_id ) 
+		VALUES ( ' JSON Sync',1  , 1 );

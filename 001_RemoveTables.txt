@@ -1,0 +1,18 @@
+ DROP TABLE IF EXISTS [security_menu];
+
+ DROP TABLE IF EXISTS [hardware_auth];
+
+ DROP TABLE IF EXISTS [oem_configuration];
+
+ DROP TABLE IF EXISTS [firstcard_control];
+
+ DROP TABLE IF EXISTS [firstcard_control_backup];
+  
+ DROP TABLE IF EXISTS [firstcard_store_forward];
+  
+ DROP TABLE IF EXISTS [firstcard_terminal];
+
+ DROP TABLE IF EXISTS [navisions_export];
+
+ DROP TABLE IF EXISTS [navisions_export_temp];
+

@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS [mobile_order_batch] (
+    [batch_date] [datetime] NULL,
+    [batch_record_id] [smallint] not null default 0
+    );

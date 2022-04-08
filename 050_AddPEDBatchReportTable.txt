@@ -1,0 +1,5 @@
+ CREATE TABLE IF NOT EXISTS [ped_batch_report] (
+    [batch_date] datetime,
+    [terminal_id] int NOT NULL,
+    [batch_report] [varchar](5000) NULL
+    );

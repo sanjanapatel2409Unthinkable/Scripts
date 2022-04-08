@@ -1,0 +1,32 @@
+ 
+    ALTER TABLE [bf_datacenter_sync_config] ADD [api_key] varchar(50);
+    ALTER TABLE [bf_datacenter_sync_config] ADD [clientget_last_update] datetime;
+    ALTER TABLE [bf_datacenter_sync_config] ADD [post_last_update] datetime;
+
+    --ALTER TABLE [bf_datacenter_sync_config] 
+
+    ALTER TABLE [bf_datacenter_sync_config] 
+     ADD COLUMN tempcol varchar(200) null;
+
+     UPDATE [bf_datacenter_sync_config] set tempcol =[api_key]  ;	
+	
+     ALTER TABLE [bf_datacenter_sync_config] 
+     DROP COLUMN [api_key]; 
+
+     ALTER TABLE [bf_datacenter_sync_config] 
+	RENAME COLUMN tempcol TO [api_key] ;
+
+    ALTER TABLE [bf_datacenter_sync_config] ADD [autosync_clients] smallint;
+    ALTER TABLE [bf_datacenter_sync_config] ADD [autosync_payments] smallint;
+    ALTER TABLE [bf_datacenter_sync_config] ADD [autosync_taxes] smallint;
+    ALTER TABLE [bf_datacenter_sync_config] ADD [autosync_gl_export] smallint;
+    ALTER TABLE bf_datacenter_sync_config RENAME COLUMN  autosync_gl_export TO autosync_gl_data;
+    
+    ALTER TABLE bf_datacenter_sync_config RENAME COLUMN  post_to_staging TO sync_type ;
+    
+    ALTER TABLE [bf_datacenter_sync_config] ADD [net_tax_included] smallint;
+    ALTER TABLE [bf_datacenter_sync_config] ADD [category_to_sync] smallint;
+     
+    ALTER TABLE [bf_datacenter_sync_config] ADD [autosync_employee] smallint;
+    ALTER TABLE [bf_datacenter_sync_config] ADD [employees_deleted_pos] TEXT;
+    ALTER TABLE [bf_datacenter_sync_config] ADD [employees_deleted_cloud_office] TEXT;

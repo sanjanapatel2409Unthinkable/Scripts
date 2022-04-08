@@ -1,0 +1,6 @@
+ ALTER TABLE [security_function]
+     ADD [function_id] smallint;
+    
+    delete from security_function where module_id =0;
+    
+    update security_function set function_id = (record_id + 1);

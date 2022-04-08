@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS [ped_merchant_receipt] (
+    [transaction_id] int NOT NULL,
+    [terminal_id] int NOT NULL,
+    [location_id] int ,
+    [result_message] [varchar](5000) NULL
+    );

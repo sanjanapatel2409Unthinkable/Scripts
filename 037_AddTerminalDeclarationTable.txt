@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS [terminal_declaration] (
+    [terminal_id] int,
+    [location_id] int,
+    [reset_batch_id] int,
+    [clerk_user_id] [varchar](35),
+    [one_cent] smallint,
+    [five_cent] smallint,
+    [ten_cent] smallint,
+    [twentyfive_cent] smallint,
+    [fifty_cent] smallint,
+    [one_dollar] smallint,
+    [two_dollar] smallint,
+    [five_dollar] smallint,
+    [ten_dollar] smallint,
+    [twenty_dollar] smallint,
+    [fifty_dollar] smallint,
+    [hundred_dollar] smallint,
+    [other_funds] money
+    );

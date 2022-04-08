@@ -1,0 +1,9 @@
+	--v 7.2.0
+    ALTER TABLE [transaction_tender]
+     DROP COLUMN [remote_pos_account_guid];
+    
+    ALTER TABLE [transaction_tender]
+     DROP COLUMN [dts_exported];
+    
+    
+    ALTER TABLE transaction_tender RENAME COLUMN card_swipe_data TO billing_account;

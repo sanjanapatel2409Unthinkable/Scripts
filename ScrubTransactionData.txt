@@ -1,0 +1,68 @@
+    DELETE FROM detail;
+    DELETE FROM header;
+    DELETE FROM transaction_tender;
+    DELETE FROM transaction_admin;
+    -- DELETE FROM blind_balance;   
+
+    DELETE FROM account_posting;
+    -- DELETE FROM client_temporary;    
+
+    DELETE FROM endofday;
+    -- DELETE FROM gift_cert_transaction;  
+
+    DELETE FROM invjournal;
+    DELETE FROM terminal_declaration;
+    DELETE FROM transaction_activity;
+    DELETE FROM transaction_modifier;
+    DELETE FROM transaction_override;
+    DELETE FROM po_header;
+    DELETE FROM po_detail;
+    DELETE FROM po_hash;
+    DELETE FROM prep_modifier_trans_detail;
+    DELETE FROM receive_detail;
+    DELETE FROM receive_header;
+    DELETE FROM nonreset_activity_log;
+    DELETE FROM printer_que_header;
+    DELETE FROM ped_merchant_receipt;
+    DELETE FROM ped_merchant_request;
+    UPDATE plu SET period1_sales = 0, 
+    period1_qty = 0, 
+    period1_cost = 0, 
+    period1_opening_qty = 0, 
+    period1_opening_cost = 0, 
+    period1_count_qty = 0, 
+    period1_purchase_qty = 0, 
+    period1_purchase_amount = 0, 
+    period1_return_qty = 0, 
+    period1_return_amount = 0, 
+    period1_replace_qty = 0, 
+    period1_replace_amount = 0, 
+    period1_adjust_qty = 0, 
+    period1_adjust_amount = 0, 
+    period1_adjust_down_qty = 0, 
+    period1_adjust_down_amount = 0, 
+    period2_sales = 0, 
+    period2_qty = 0, 
+    period2_cost = 0, 
+    period2_opening_qty = 0, 
+    period2_opening_cost = 0, 
+    period2_count_qty = 0, 
+    period2_purchase_qty = 0, 
+    period2_purchase_amount = 0, 
+    period2_return_qty = 0, 
+    period2_return_amount = 0, 
+    period2_replace_qty = 0, 
+    period2_replace_amount = 0, 
+    period2_adjust_qty = 0, 
+    period2_adjust_amount = 0, 
+    period2_adjust_down_qty = 0, 
+    period2_adjust_down_amount = 0, 
+    week1_hist = 0, 
+    week2_hist = 0, 
+    week3_hist = 0, 
+    week4_hist = 0;
+
+    UPDATE nonresettotals SET openingamt_netted= 0, 
+     currentamt_netted = 0, 
+     currentamt_inclusive = 0, 
+     openingamt_inclusive = 0;

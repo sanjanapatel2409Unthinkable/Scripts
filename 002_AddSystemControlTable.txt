@@ -1,0 +1,4 @@
+ CREATE TABLE IF NOT EXISTS bf_system_control (
+     [price_zones] smallint,
+     [active_zones] smallint,
+     [time_zones] smallint  );

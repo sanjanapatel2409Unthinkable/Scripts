@@ -1,0 +1,51 @@
+ALTER TABLE [terminal] RENAME  COLUMN pin_pad TO mag_stripe_reader;    
+    
+    ALTER TABLE [terminal] RENAME  COLUMN keyboard_detect TO menu_beep;    
+    
+    ALTER TABLE [terminal] RENAME  COLUMN biometric_download_image TO remote_print_server;
+        
+    ALTER TABLE [terminal] RENAME  COLUMN DataCenterSync TO data_center_sync;
+    
+    ALTER TABLE [terminal] RENAME  COLUMN system_if_onstart TO virtual_terminal;
+        
+    ALTER TABLE [terminal] RENAME  COLUMN in_lane_advertising TO cash_declaration;
+        
+    ALTER TABLE [terminal] RENAME  COLUMN cash_declaration TO cash_declaration_type;
+        
+    ALTER TABLE [terminal] RENAME  COLUMN remote_printer_ops TO prep_printer_id;
+        
+    ALTER TABLE [terminal]
+     DROP  COLUMN  [datacenter_api_key];
+        
+    ALTER TABLE [terminal]
+     ADD [datacenter_id] smallint;
+        
+    ALTER TABLE [terminal]
+     ADD [database_backup] smallint;
+        
+    ALTER TABLE [terminal]
+     ADD [cash_float] money;
+        
+    ALTER TABLE [terminal]
+     ADD [blind_balance] smallint;
+        
+    ALTER TABLE [terminal]
+     ADD [cd_usb] smallint;
+        
+    ALTER TABLE [terminal]
+     ADD [cd_12v] smallint;
+        
+    ALTER TABLE [terminal]
+     ADD [ped_ip_address] [nvarchar](50);
+        
+    ALTER TABLE [terminal]
+     ADD [ped_ecr_id] [nvarchar](50);
+        
+    ALTER TABLE [terminal]
+     ADD [prep_printer_port] smallint;   
+        
+    ALTER TABLE [terminal]
+     ADD ped_password  VARCHAR(30);
+    
+    UPDATE terminal
+       SET ped_password = (SELECT  ped_password FROM bf_system_control LIMIT 1)  ;

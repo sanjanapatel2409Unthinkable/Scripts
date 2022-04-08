@@ -1,0 +1,74 @@
+	ALTER TABLE [bf_system_control]
+     ADD [day_start] datetime;
+	 
+	 ALTER TABLE [bf_system_control]
+     ADD [day_end] datetime;
+	 
+	 ALTER TABLE [bf_system_control]
+     ADD [last_internet_check] datetime;
+	 
+	 ALTER TABLE [bf_system_control]
+     ADD [merchant_name] [varchar](100) NULL;
+	 
+	 ALTER TABLE [bf_system_control]
+     ADD [merchant_address1] [varchar](100) NULL;
+	 
+	 ALTER TABLE [bf_system_control]
+     ADD [merchant_address2] [varchar](100) NULL;
+     
+	 ALTER TABLE [bf_system_control]
+     ADD [merchant_prov] [varchar](10) NULL;
+	 
+	 ALTER TABLE [bf_system_control]
+     ADD [merchant_pcode] [varchar](10) NULL;
+	 
+	 ALTER TABLE [bf_system_control]
+     ADD [merchant_city] [varchar](50) NULL;
+	 
+	 ALTER TABLE [bf_system_control]
+     ADD [ped_port] smallint;
+	 
+	 ALTER TABLE [bf_system_control]
+     ADD  [ped_ip] [varchar](16) NULL;
+	 
+	 ALTER TABLE [bf_system_control]
+     ADD   [reboot_counter] smallint;
+    
+     ALTER TABLE [bf_system_control]
+     ADD [bf_site_ip] [varchar](16) NULL;
+    
+    
+    ALTER TABLE bf_system_control RENAME COLUMN reboot_counter TO auto_reboot_terminal  ;
+    
+    
+    ALTER TABLE [bf_system_control]
+      ADD [password_min_len] smallint NOT NULL default(0);
+    
+    
+    ALTER TABLE [bf_system_control]
+      ADD [password_max_len] smallint NOT NULL default(0) ;
+    
+    
+    ALTER TABLE [bf_system_control]
+      ADD [usercode_min_len] smallint NOT NULL default(0);
+    
+    
+    ALTER TABLE [bf_system_control]
+      ADD [usercode_max_len] smallint NOT NULL default(0);
+    
+    
+    ALTER TABLE [bf_system_control]
+      ADD [batch_close] smallint NOT NULL default(0);
+    
+    
+    ALTER TABLE [bf_system_control]
+      ADD [menu_button_font_size] smallint NOT NULL default(8);
+    
+    
+    ALTER TABLE [bf_system_control]
+      ADD [batch_close_on_reset] smallint NOT NULL default(0);
+    
+    
+    ALTER TABLE [bf_system_control]
+      ADD TipDepartment INT NOT NULL DEFAULT(0);
+    

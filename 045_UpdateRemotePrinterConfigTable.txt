@@ -1,0 +1,7 @@
+ALTER TABLE [remote_print_configuration]
+     DROP COLUMN [port_id];
+    
+    ALTER TABLE remote_print_configuration RENAME COLUMN  alternate_printer_id TO printer_role;
+        
+    ALTER TABLE [remote_print_configuration]
+     ADD commPort int;

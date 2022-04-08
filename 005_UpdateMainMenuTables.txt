@@ -1,0 +1,7 @@
+	ALTER TABLE service_menu RENAME TO  main_menu;    
+    
+    ALTER TABLE main_menu RENAME COLUMN  service_menu_id   TO  main_menu_id;
+    
+    ALTER TABLE service_menu_detail RENAME TO  main_menu_detail;    
+    
+    ALTER TABLE main_menu_detail RENAME COLUMN  service_menu_id  TO  main_menu_id;

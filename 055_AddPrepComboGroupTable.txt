@@ -1,0 +1,5 @@
+ CREATE TABLE IF NOT EXISTS [plu_prep_combo_groups] (
+    [group_id] [int] NULL,
+    [name] [nvarchar](50) NULL
+    );
+   

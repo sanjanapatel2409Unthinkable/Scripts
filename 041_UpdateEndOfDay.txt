@@ -1,0 +1,10 @@
+ALTER TABLE endofday
+     DROP COLUMN remotePOSbatchRID;
+    
+    ALTER TABLE endofday
+     DROP COLUMN closeGUID;
+    
+     ALTER TABLE endofday ADD 
+      gl_export int NULL; 
+    
+    ALTER TABLE endofday   RENAME COLUMN  archived TO deposit_report_printed;
